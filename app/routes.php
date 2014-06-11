@@ -17,5 +17,7 @@ Route::get('/', function()
 });
 
 Route::get('users', function () {
-	return User::all();
+	$users = User::all();
+	
+	return View::make('users.index', compact('users'));
 });
